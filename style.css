@@ -54,20 +54,59 @@
    }
 
 
-.ex-6-img, .ex-7-img, .ex-8-img {
+.ex-6-img,.ex-7-img, .ex-8-img{
     width: 500px;
+}
+
+.ex-6-img:hover, .ex-7-img:hover, .ex-8-img:hover{
+    filter: grayscale(1);
+}
+
+.ex-7-img{
+    transition: 2s;
+}
+
+.ex-8-img{
+    transition: 2s;
+}
+.ex-8-img:hover{
+    border-radius: 10%;
 }
 
 .ex-9-img {
     margin: 50px 100px;
     width: 400px;
+    transition: 1s;
 }
+.ex-9-img:hover{
+    filter: grayscale(1);
+    border-radius: 50%;
+    transform:scale(2)
+}
+
 .ex-10-icon {
     font-size: 60px;
+    animation: move 3s infinite;
 }
+@keyframes move {
+    100% {transform: rotate(360deg);}
+  }
 .ex-11-icon {
     font-size: 60px;
 }
+
+.ex-11-icon:hover{
+    animation: move-2 3s linear;
+}
+
+@keyframes move-2{
+    0% {transform: rotate(0deg);}
+    90% {transform: rotate(270deg);}
+    100% {transform: rotate(0deg);}
+}
+
+
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -81,19 +120,107 @@
     text-align: center;
     text-decoration: none;
 }
-.ex-12-top-white, .ex-13-top-white {
+
+
+
+.ex-12-top-white {
     position: absolute;
     top: -10px;
     left: 10%;
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    animation: btn-move-1 3s infinite;
 }
-.ex-12-bottom-white, .ex-13-bottom-white {
+
+
+@keyframes btn-move-1{
+    0% {transform:
+        top: -10px;
+        left: 10%;}
+
+    50% {transform:
+        top: -10px;
+        left: calc(100% - 60px);
+    }
+            
+    100% {transform:
+        top: -10px;
+        left: 0%;}
+    } 
+
+            
+ .ex-13-top-white {
+    position: absolute;
+    top: -10px;
+    left: 10%;
+    background: #f5f5f5;
+    width: 60px;
+    height: 20px;
+    animation: btn-move-2 3s infinite;
+    }
+
+    
+@keyframes btn-move-2{
+    0% {
+        left: 10%;
+        top: -10px;
+    }
+    30% {
+        left: calc(100% - 30px);
+        top: -10px;
+    }
+    45% {
+        left: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        left: 0;
+        top: 100%;
+    }
+    90% {
+        left: -15px;
+        top: -10px;
+    }
+    100% {
+        left: 10%;
+        top: -10px;
+    }
+}
+.ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
     right: 20%;
     background: #f5f5f5;
     width: 60px;
     height: 20px;
+    animation: btn-move-3 3s infinite;
+}
+
+    
+@keyframes btn-move-3{
+    0% {
+        right: 20%;
+        bottom: -10px;
+    }
+    30% {
+        right: calc(100% - 30px);
+        top: -10px;
+    }
+    45% {
+        right: calc(100% - 30px);
+        top: 100%;
+    }
+    75% {
+        right: 0;
+        top: 100%;
+    }
+    90% {
+        right: -15px;
+        top: -10px;
+    }
+    100% {
+        right: 20%;
+        top: -10px;
+    }
 }
